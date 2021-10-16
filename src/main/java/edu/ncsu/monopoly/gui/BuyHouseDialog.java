@@ -49,13 +49,8 @@ import edu.ncsu.monopoly.Player;
 	private JButton buildCancelButton() 
 	{
 		var btn = new JButton("Cancel");
-		btn.addActionListener(new ActionListener()
-		{
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
+		btn.addActionListener(e -> {
 				cancelClicked();
-			}
 		});
 		return btn;
 	}
@@ -76,12 +71,8 @@ import edu.ncsu.monopoly.Player;
 	private JButton buildOKButton() 
 	{
 		var btn = new JButton("OK");
-		btn.addActionListener(new ActionListener()
-		{
-    public void actionPerformed(ActionEvent e) 
-			{
+		btn.addActionListener(e -> {
 				okClicked();
-			}
 		});
 		return btn;
 	}
