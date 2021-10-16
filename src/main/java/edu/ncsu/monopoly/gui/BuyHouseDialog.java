@@ -6,6 +6,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.jdo.annotations.Serialized;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
@@ -18,10 +19,11 @@ public class BuyHouseDialog extends JDialog {
 	/**
 	 * 
 	 */
+	//un comentario para probar
 	private static final long serialVersionUID = 1L;
 	private JComboBox<String> cboMonopoly; 
 	private JComboBox<String> cboNumber;
-
+	
 	private Player player;
 
 	public BuyHouseDialog(Player player) {
