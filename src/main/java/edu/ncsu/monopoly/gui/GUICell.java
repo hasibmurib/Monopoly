@@ -1,11 +1,17 @@
 package edu.ncsu.monopoly.gui;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridLayout;
 
-import javax.swing.*;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.OverlayLayout;
 import javax.swing.border.BevelBorder;
 
-import edu.ncsu.monopoly.*;
+import edu.ncsu.monopoly.Cell;
+import edu.ncsu.monopoly.GameMaster;
+import edu.ncsu.monopoly.Player;
 
 public class GUICell extends JPanel {
 

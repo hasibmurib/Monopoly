@@ -3,9 +3,8 @@ package edu.ncsu.monopoly;
 import java.awt.Dimension;
 import java.util.List;
 
-import junit.framework.TestCase;
-
 import edu.ncsu.monopoly.gui.GameBoardUtil;
+import junit.framework.TestCase;
 
 public class GameboardCreationTest extends TestCase{
 	

@@ -1,19 +1,25 @@
 package edu.ncsu.monopoly.gui;
 
-import java.awt.*;
 import java.awt.Container;
+import java.awt.Frame;
 import java.awt.GridLayout;
-import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
-import edu.ncsu.monopoly.*;
+import edu.ncsu.monopoly.Cell;
+import edu.ncsu.monopoly.GameMaster;
+import edu.ncsu.monopoly.Player;
 import edu.ncsu.monopoly.TradeDeal;
 import edu.ncsu.monopoly.TradeDialog;
 
