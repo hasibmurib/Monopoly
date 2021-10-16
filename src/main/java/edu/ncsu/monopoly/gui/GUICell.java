@@ -23,18 +23,18 @@ public class GUICell extends JPanel {
 	private JLabel[] lblPlayers = new JLabel[GameMaster.MAX_PLAYER];
 	
     public GUICell(CELL cell) {
-        this.cell = cell;
-        setLayout(new OverlayLayout(this));
-        setBorder(new BevelBorder(BevelBorder.LOWERED));
-        var pnlPlayer = new JPanel();
-        pnlPlayer.setLayout(new GridLayout(2, 4));
-        pnlPlayer.setOpaque(false);
-        createPlayerLabels(pnlPlayer);
-        add(pnlPlayer);
-        setPreferredSize(new Dimension(100,100));
-        addCellInfo();
-        this.doLayout();
-	}
+    this.cell = cell;
+    setLayout(new OverlayLayout(this));
+    setBorder(new BevelBorder(BevelBorder.LOWERED));
+    var pnlPlayer = new JPanel();
+    pnlPlayer.setLayout(new GridLayout(2, 4));
+    pnlPlayer.setOpaque(false);
+    createPlayerLabels(pnlPlayer);
+    add(pnlPlayer);
+    setPreferredSize(new Dimension(100,100));
+    addCellInfo();
+    this.doLayout();
+}
 	
 	private void addCellInfo() {
         lblInfo = new JLabel();
@@ -61,7 +61,7 @@ public class GUICell extends JPanel {
 
 	public void displayInfo() {
 		lblInfo.setText(InfoFormatter.cellInfo(cell));
-        this.invalidate();
+    this.invalidate();
 		this.repaint();
 	}
 

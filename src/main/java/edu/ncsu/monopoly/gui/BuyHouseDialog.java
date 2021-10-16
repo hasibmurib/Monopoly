@@ -14,7 +14,9 @@ import javax.swing.JLabel;
 import edu.ncsu.monopoly.Player;
 
 
-public class BuyHouseDialog extends JDialog {
+
+    public class BuyHouseDialog extends JDialog 
+{
 	/**
 	 * 
 	 */
@@ -23,13 +25,14 @@ public class BuyHouseDialog extends JDialog {
 	/**
 	 * 
 	 */
-	
+
 	private JComboBox<String> cboMonopoly; 
 	private JComboBox<String> cboNumber;
-	
+
 	private Player player;
 
-	public BuyHouseDialog(Player player) {
+    public BuyHouseDialog(Player player) 
+	{
 		this.player = player;
 		Container c = this.getContentPane();
 		c.setLayout(new GridLayout(BuyHouseDialog.TRES, DOS));
@@ -43,42 +46,52 @@ public class BuyHouseDialog extends JDialog {
 		this.pack();
 	}
 
-	private JButton buildCancelButton() {
+	private JButton buildCancelButton() 
+	{
 		var btn = new JButton("Cancel");
-		btn.addActionListener(new ActionListener(){
-    public void actionPerformed(ActionEvent e) {
-      cancelClicked();
+		btn.addActionListener(new ActionListener()
+		{
+    public void actionPerformed(ActionEvent e) 
+			{
+				cancelClicked();
 			}
 		});
 		return btn;
 	}
 
-	private JComboBox<String> buildMonopolyComboBox() {
+	private JComboBox<String> buildMonopolyComboBox() 
+	{
 		cboMonopoly = new JComboBox<>(player.getMonopolies());
 		return cboMonopoly;
 	}
-	
-	private JComboBox<String> buildNumberComboBox() {
+
+	private JComboBox<String> buildNumberComboBox() 
+	{
 		JComboBox<String> jComboBox = new JComboBox<>();
 		cboNumber = jComboBox;
 		return cboNumber;
 	}
 
-	private JButton buildOKButton() {
+	private JButton buildOKButton() 
+	{
 		var btn = new JButton("OK");
-		btn.addActionListener(new ActionListener(){
-    public void actionPerformed(ActionEvent e) {
-      okClicked();
+		btn.addActionListener(new ActionListener()
+		{
+    public void actionPerformed(ActionEvent e) 
+			{
+				okClicked();
 			}
 		});
 		return btn;
 	}
-	
-	private void cancelClicked() {
+
+	private void cancelClicked() 
+	{
 		this.dispose();
 	}
-	
-	private void okClicked() {
+
+	private void okClicked() 
+	{
 		String monopoly = (String)cboMonopoly.getSelectedItem();
 		int number = cboNumber.getSelectedIndex() + 1;
 		player.purchaseHouse(monopoly, number);
