@@ -31,16 +31,16 @@ public class GameBoardFull extends GameBoard {
         var y1 = new PropertyCell();
         var y2 = new PropertyCell();
         var u2 = new UtilityCell();
-        PropertyCell y3 = new PropertyCell();
-        GoToJailCell goToJail = new GoToJailCell();
-        PropertyCell g1 = new PropertyCell();
-        PropertyCell g2 = new PropertyCell();
-        CardCell cc3 = new CardCell(Card.TYPE_CC, "Community Chest 3");
-        PropertyCell g3 = new PropertyCell();
-        RailRoadCell rr4 = new RailRoadCell();
-        CardCell c3 = new CardCell(Card.TYPE_CHANCE, "Chance 3");
-        PropertyCell db1 = new PropertyCell();
-        PropertyCell db2 = new PropertyCell();
+        var y3 = new PropertyCell();
+        var goToJail = new GoToJailCell();
+        var g1 = new PropertyCell();
+        var g2 = new PropertyCell();
+        var cc3 = new CardCell(Card.TYPE_CC, "Community Chest 3");
+        var g3 = new PropertyCell();
+        var rr4 = new RailRoadCell();
+        var c3 = new CardCell(Card.TYPE_CHANCE, "Chance 3");
+        var db1 = new PropertyCell();
+        var db2 = new PropertyCell();
         var db3 = new PropertyCell();
         
 
