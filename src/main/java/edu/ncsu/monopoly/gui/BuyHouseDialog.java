@@ -15,8 +15,12 @@ import edu.ncsu.monopoly.Player;
 
 
 public class BuyHouseDialog extends JDialog {
-	private JComboBox cboMonopoly; 
-	private JComboBox cboNumber;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JComboBox<String> cboMonopoly; 
+	private JComboBox<String> cboNumber;
 
 	private Player player;
 
@@ -44,18 +48,14 @@ public class BuyHouseDialog extends JDialog {
 		return btn;
 	}
 
-	private JComboBox buildMonopolyComboBox() {
-		cboMonopoly = new JComboBox(player.getMonopolies());
+	private JComboBox<String> buildMonopolyComboBox() {
+		cboMonopoly = new JComboBox<String>(player.getMonopolies());
 		return cboMonopoly;
 	}
 	
-	private JComboBox buildNumberComboBox() {
-		cboNumber = new JComboBox(new Integer[]{
-				new Integer(1),
-				new Integer(2),
-				new Integer(3),
-				new Integer(4),
-				new Integer(5)});
+	private JComboBox<String> buildNumberComboBox() {
+		JComboBox<String> jComboBox = new JComboBox<String>();
+		cboNumber = jComboBox;
 		return cboNumber;
 	}
 
