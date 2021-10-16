@@ -1,6 +1,6 @@
 package edu.ncsu.monopoly;
 
-public class FreeParkingCell extends Cell {
+public class FreeParkingCell extends CELL {
 
 	public FreeParkingCell() {
 		setName("Free Parking");

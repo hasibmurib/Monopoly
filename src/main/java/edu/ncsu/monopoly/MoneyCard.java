@@ -1,6 +1,6 @@
 package edu.ncsu.monopoly;
 
-public class MoneyCard extends Card {
+public class MoneyCard extends CARD {
     private int amount;
     private int cardType;
     

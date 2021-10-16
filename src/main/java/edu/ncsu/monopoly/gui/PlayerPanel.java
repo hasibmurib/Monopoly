@@ -13,8 +13,8 @@ import javax.swing.JTextArea;
 import javax.swing.OverlayLayout;
 import javax.swing.border.BevelBorder;
 
-import edu.ncsu.monopoly.Card;
-import edu.ncsu.monopoly.Cell;
+import edu.ncsu.monopoly.CARD;
+import edu.ncsu.monopoly.CELL;
 import edu.ncsu.monopoly.GameMaster;
 import edu.ncsu.monopoly.Player;
 
@@ -126,7 +126,7 @@ public class PlayerPanel extends JPanel {
 
         btnDrawCard.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Card card = GameMaster.instance().btnDrawCardClicked();
+                CARD card = GameMaster.instance().btnDrawCardClicked();
                 JOptionPane
                         .showMessageDialog(PlayerPanel.this, card.getLabel());
                 displayInfo();
@@ -144,7 +144,7 @@ public class PlayerPanel extends JPanel {
         lblName.setText(player.getName());
         lblMoney.setText("$ " + player.getMoney());
         StringBuffer buf = new StringBuffer();
-        Cell[] cells = player.getAllProperties();
+        CELL[] cells = player.getAllProperties();
         for (int i = 0; i < cells.length; i++) {
             buf.append(cells[i] + "\n");
         }

@@ -1,6 +1,6 @@
 package edu.ncsu.monopoly;
 
-public class GoCell extends Cell {
+public class GoCell extends CELL {
 	public GoCell() {
 		super.setName("Go");
 		setAvailable(false);

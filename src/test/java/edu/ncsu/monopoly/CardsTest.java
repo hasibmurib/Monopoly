@@ -3,7 +3,7 @@ package edu.ncsu.monopoly;
 import junit.framework.TestCase;
 
 public class CardsTest extends TestCase {
-    Card ccCard, chanceCard;   
+    CARD ccCard, chanceCard;   
     
     GameMaster gameMaster;
 
@@ -13,15 +13,15 @@ public class CardsTest extends TestCase {
         gameMaster.setNumberOfPlayers(1);
         gameMaster.reset();
         gameMaster.setGUI(new MockGUI());
-        ccCard = new MoneyCard("Get 50 dollars", 50, Card.TYPE_CC);
-        chanceCard = new MoneyCard("Lose 50 dollars", -50, Card.TYPE_CHANCE);
+        ccCard = new MoneyCard("Get 50 dollars", 50, CARD.TYPE_CC);
+        chanceCard = new MoneyCard("Lose 50 dollars", -50, CARD.TYPE_CHANCE);
         gameMaster.getGameBoard().addCard(ccCard);
     }
     
     public void testCardType() {
-        Card card = gameMaster.drawCCCard();
-        assertEquals(Card.TYPE_CC, ccCard.getCardType());
+        CARD card = gameMaster.drawCCCard();
+        assertEquals(CARD.TYPE_CC, ccCard.getCardType());
         card = gameMaster.drawChanceCard();
-        assertEquals(Card.TYPE_CHANCE, chanceCard.getCardType());
+        assertEquals(CARD.TYPE_CHANCE, chanceCard.getCardType());
     }
 }

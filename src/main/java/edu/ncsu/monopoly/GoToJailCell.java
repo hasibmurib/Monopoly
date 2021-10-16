@@ -1,6 +1,6 @@
 package edu.ncsu.monopoly;
 
-public class GoToJailCell extends Cell {
+public class GoToJailCell extends CELL {
 	
 	public GoToJailCell() {
 		setName("Go to Jail");

@@ -4,7 +4,7 @@ import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.ncsu.monopoly.Cell;
+import edu.ncsu.monopoly.CELL;
 import edu.ncsu.monopoly.GameBoard;
 
 public class GameBoardUtil {
@@ -16,42 +16,42 @@ public class GameBoardUtil {
 		return new Dimension(longSide, shortSide);
 	}
 	
-	public static List<Cell> getEastCells(GameBoard board) {
+	public static List<CELL> getEastCells(GameBoard board) {
 		Dimension d = calculateDimension(board.getCellNumber());
 		int shortSide = d.height;
-		List<Cell> cells = new ArrayList<Cell>();
+		List<CELL> cells = new ArrayList<CELL>();
 		for(int i = board.getCellNumber() - shortSide; i <= board.getCellNumber() - 1; i++) {
 			cells.add(board.getCell(i));
 		}
 		return cells;
 	}
 	
-	public static List<Cell> getNorthCells(GameBoard board) {
+	public static List<CELL> getNorthCells(GameBoard board) {
 		Dimension d = calculateDimension(board.getCellNumber());
 		int longSide = d.width;
 		int shortSide = d.height;
-		List<Cell> cells = new ArrayList<Cell>();
+		List<CELL> cells = new ArrayList<CELL>();
 		for(int i = longSide + 2 + shortSide; i <= longSide + 2 + shortSide + longSide + 1; i++) {
 			cells.add(board.getCell(i));
 		}
 		return cells;
 	}
 	
-	public static List<Cell> getSouthCells(GameBoard board) {
+	public static List<CELL> getSouthCells(GameBoard board) {
 		Dimension d = calculateDimension(board.getCellNumber());
 		int longSide = d.width;
-		List<Cell> cells = new ArrayList<Cell>();
+		List<CELL> cells = new ArrayList<CELL>();
 		for(int i = longSide + 1; i >= 0; i--) {
 			cells.add(board.getCell(i));
 		}
 		return cells;
 	}
 	
-	public static List<Cell> getWestCells(GameBoard board) {
+	public static List<CELL> getWestCells(GameBoard board) {
 		Dimension d = calculateDimension(board.getCellNumber());
 		int longSide = d.width;
 		int shortSide = d.height;
-		List<Cell> cells = new ArrayList<Cell>();
+		List<CELL> cells = new ArrayList<CELL>();
 		for(int i = longSide + 1 + shortSide; i > longSide + 1; i--) {
 			cells.add(board.getCell(i));
 		}

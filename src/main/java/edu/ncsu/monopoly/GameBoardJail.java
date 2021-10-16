@@ -3,7 +3,7 @@ package edu.ncsu.monopoly;
 public class GameBoardJail extends GameBoard {
 	public GameBoardJail() {
 		super();
-		PropertyCell blue1 = new PropertyCell();
+		var blue1 = new PropertyCell();
 		PropertyCell blue2 = new PropertyCell();
 		PropertyCell blue3 = new PropertyCell();
 		PropertyCell green1 = new PropertyCell();

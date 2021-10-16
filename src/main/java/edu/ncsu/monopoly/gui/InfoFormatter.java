@@ -3,7 +3,7 @@ package edu.ncsu.monopoly.gui;
 import java.util.Hashtable;
 
 import edu.ncsu.monopoly.CardCell;
-import edu.ncsu.monopoly.Cell;
+import edu.ncsu.monopoly.CELL;
 import edu.ncsu.monopoly.FreeParkingCell;
 import edu.ncsu.monopoly.GoCell;
 import edu.ncsu.monopoly.GoToJailCell;
@@ -41,7 +41,7 @@ public class InfoFormatter {
                 CardCell.class, new CCCellInfoFormatter());
     }
 
-    public static String cellInfo(Cell cell) {
+    public static String cellInfo(CELL cell) {
         CellInfoFormatter formatter =
                 (CellInfoFormatter) cellInfoFormatters.get(cell.getClass());
         return formatter.format(cell);

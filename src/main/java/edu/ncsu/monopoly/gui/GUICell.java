@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.OverlayLayout;
 import javax.swing.border.BevelBorder;
 
-import edu.ncsu.monopoly.Cell;
+import edu.ncsu.monopoly.CELL;
 import edu.ncsu.monopoly.GameMaster;
 
 public class GUICell extends JPanel {
@@ -18,11 +18,11 @@ public class GUICell extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = -3697063853300632551L;
-	private Cell cell;
+	private CELL cell;
 	private JLabel lblInfo;
 	private JLabel[] lblPlayers = new JLabel[GameMaster.MAX_PLAYER];
 	
-    public GUICell(Cell cell) {
+    public GUICell(CELL cell) {
         this.cell = cell;
         setLayout(new OverlayLayout(this));
         setBorder(new BevelBorder(BevelBorder.LOWERED));
@@ -65,7 +65,7 @@ public class GUICell extends JPanel {
 		this.repaint();
 	}
 
-	public Cell getCell() {
+	public CELL getCell() {
 		return cell;
 	}
 	

@@ -11,12 +11,12 @@ public class GameBoardFull extends GameBoard {
 	public GameBoardFull() {
     super();
   var dp1 = new PropertyCell();
-  CardCell cc1 = new CardCell(Card.TYPE_CC, "Community Chest 1");
+  CardCell cc1 = new CardCell(CARD.TYPE_CC, "Community Chest 1");
   var dp2 = new PropertyCell();
   var dp3 = new PropertyCell();
   var rr1 = new RailRoadCell();
   var lb1 = new PropertyCell();
-  var c1 = new CardCell(Card.TYPE_CHANCE, "Chance 1");
+  var c1 = new CardCell(CARD.TYPE_CHANCE, "Chance 1");
   var lb2 = new PropertyCell();
   var lb3 = new PropertyCell();
   var jail = new JailCell();
@@ -26,12 +26,12 @@ public class GameBoardFull extends GameBoard {
   var p3 = new PropertyCell();
   var rr2 = new RailRoadCell();
   var o1 = new PropertyCell();
-  var cc2 = new CardCell(Card.TYPE_CC, "Community Chest 2");
+  var cc2 = new CardCell(CARD.TYPE_CC, "Community Chest 2");
   var o2 = new PropertyCell();
   var o3 = new PropertyCell();
   var fp = new FreeParkingCell();
   var r1 = new PropertyCell();
-  var c2 = new CardCell(Card.TYPE_CHANCE, "Chance 2");
+  var c2 = new CardCell(CARD.TYPE_CHANCE, "Chance 2");
   var r2 = new PropertyCell();
   var r3 = new PropertyCell();
   var rr3 = new RailRoadCell();
@@ -42,10 +42,10 @@ public class GameBoardFull extends GameBoard {
   var goToJail = new GoToJailCell();
   var g1 = new PropertyCell();
   var g2 = new PropertyCell();
-  var cc3 = new CardCell(Card.TYPE_CC, "Community Chest 3");
+  var cc3 = new CardCell(CARD.TYPE_CC, "Community Chest 3");
   var g3 = new PropertyCell();
   var rr4 = new RailRoadCell();
-  var c3 = new CardCell(Card.TYPE_CHANCE, "Chance 3");
+  var c3 = new CardCell(CARD.TYPE_CHANCE, "Chance 3");
   var db1 = new PropertyCell();
   var db2 = new PropertyCell();
   var db3 = new PropertyCell();
@@ -248,21 +248,21 @@ public class GameBoardFull extends GameBoard {
   addCell(db2);
   addCell(db3);
   
-  addCard(new MoneyCard("Win $50", 50, Card.TYPE_CC));
-  addCard(new MoneyCard("Win $20", 20, Card.TYPE_CC));
-  addCard(new MoneyCard("Win $10", 10, Card.TYPE_CC));
-  addCard(new MoneyCard("Lose $100", -100, Card.TYPE_CC));
-  addCard(new MoneyCard("Lose $50", -50, Card.TYPE_CC));
-  addCard(new JailCard(Card.TYPE_CC));
-  addCard(new MovePlayerCard("St. Charles Place", Card.TYPE_CC));
-  addCard(new MovePlayerCard("Boardwalk", Card.TYPE_CC));
+  addCard(new MoneyCard("Win $50", 50, CARD.TYPE_CC));
+  addCard(new MoneyCard("Win $20", 20, CARD.TYPE_CC));
+  addCard(new MoneyCard("Win $10", 10, CARD.TYPE_CC));
+  addCard(new MoneyCard("Lose $100", -100, CARD.TYPE_CC));
+  addCard(new MoneyCard("Lose $50", -50, CARD.TYPE_CC));
+  addCard(new JailCard(CARD.TYPE_CC));
+  addCard(new MovePlayerCard("St. Charles Place", CARD.TYPE_CC));
+  addCard(new MovePlayerCard("Boardwalk", CARD.TYPE_CC));
 
-  addCard(new MoneyCard("Win $50", 50, Card.TYPE_CHANCE));
-  addCard(new MoneyCard("Win $20", 20, Card.TYPE_CHANCE));
-  addCard(new MoneyCard("Win $10", 10, Card.TYPE_CHANCE));
-  addCard(new MoneyCard("Lose $100", -100, Card.TYPE_CHANCE));
-  addCard(new MoneyCard("Lose $50", -50, Card.TYPE_CHANCE));
-  addCard(new JailCard(Card.TYPE_CHANCE));
-  addCard(new MovePlayerCard("Illinois Avenue", Card.TYPE_CHANCE));
+  addCard(new MoneyCard("Win $50", 50, CARD.TYPE_CHANCE));
+  addCard(new MoneyCard("Win $20", 20, CARD.TYPE_CHANCE));
+  addCard(new MoneyCard("Win $10", 10, CARD.TYPE_CHANCE));
+  addCard(new MoneyCard("Lose $100", -100, CARD.TYPE_CHANCE));
+  addCard(new MoneyCard("Lose $50", -50, CARD.TYPE_CHANCE));
+  addCard(new JailCard(CARD.TYPE_CHANCE));
+  addCard(new MovePlayerCard("Illinois Avenue", CARD.TYPE_CHANCE));
     }
 }

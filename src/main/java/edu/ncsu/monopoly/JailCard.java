@@ -1,7 +1,7 @@
 package edu.ncsu.monopoly;
 
 
-public class JailCard extends Card {
+public class JailCard extends CARD {
     int type;
     
     public JailCard(int cardType) {

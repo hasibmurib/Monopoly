@@ -1,7 +1,7 @@
 package edu.ncsu.monopoly;
 
 
-public class MovePlayerCard extends Card {
+public class MovePlayerCard extends CARD {
     
     private String destination;
     private int type;
@@ -13,7 +13,7 @@ public class MovePlayerCard extends Card {
 
     public void applyAction() {
         Player currentPlayer = GameMaster.instance().getCurrentPlayer();
-        Cell currentPosition = currentPlayer.getPosition();
+        CELL currentPosition = currentPlayer.getPosition();
         int newCell = GameMaster.instance().getGameBoard().queryCellIndex(destination);
         int currentCell = GameMaster.instance().getGameBoard().queryCellIndex(currentPosition.getName());
         int diceValue = 0;

@@ -33,11 +33,11 @@ public class GameMaster {
         gui.showBuyHouseDialog(getCurrentPlayer());
     }
 
-    public Card btnDrawCardClicked() {
+    public CARD btnDrawCardClicked() {
         gui.setDrawCardEnabled(false);
         CardCell cell = (CardCell)getCurrentPlayer().getPosition();
-        Card card = null;
-        if(cell.getType() == Card.TYPE_CC) {
+        CARD card = null;
+        if(cell.getType() == CARD.TYPE_CC) {
             card = getGameBoard().drawCCCard();
             card.applyAction();
         } else {
@@ -123,16 +123,16 @@ public class GameMaster {
 
     public void completeTrade(TradeDeal deal) {
         Player seller = getPlayer(deal.getPlayerIndex());
-        Cell property = gameBoard.queryCell(deal.getPropertyName());
+        CELL property = gameBoard.queryCell(deal.getPropertyName());
         seller.sellProperty(property, deal.getAmount());
         getCurrentPlayer().buyProperty(property, deal.getAmount());
     }
 
-    public Card drawCCCard() {
+    public CARD drawCCCard() {
         return gameBoard.drawCCCard();
     }
 
-    public Card drawChanceCard() {
+    public CARD drawChanceCard() {
         return gameBoard.drawChanceCard();
     }
 
@@ -196,7 +196,7 @@ public class GameMaster {
 	}
 	
 	public void movePlayer(Player player, int diceValue) {
-		Cell currentPosition = player.getPosition();
+		CELL currentPosition = player.getPosition();
 		int positionIndex = gameBoard.queryCellIndex(currentPosition.getName());
 		int newIndex = (positionIndex+diceValue)%gameBoard.getCellNumber();
 		if(newIndex <= positionIndex || diceValue > gameBoard.getCellNumber()) {
@@ -209,7 +209,7 @@ public class GameMaster {
 	}
 
 	public void playerMoved(Player player) {
-		Cell cell = player.getPosition();
+		CELL cell = player.getPosition();
 		int playerIndex = getPlayerIndex(player);
 		if(cell instanceof CardCell) {
 		    gui.setDrawCardEnabled(true);

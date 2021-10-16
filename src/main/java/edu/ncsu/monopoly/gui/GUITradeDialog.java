@@ -17,7 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-import edu.ncsu.monopoly.Cell;
+import edu.ncsu.monopoly.CELL;
 import edu.ncsu.monopoly.GameMaster;
 import edu.ncsu.monopoly.Player;
 import edu.ncsu.monopoly.TradeDeal;
@@ -79,7 +79,7 @@ public class GUITradeDialog extends JDialog implements TradeDialog {
                             "Amount should be an integer", "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
-                Cell cell = (Cell)cboProperties.getSelectedItem();
+                CELL cell = (CELL)cboProperties.getSelectedItem();
                 if(cell == null) return;
                 Player player = (Player)cboSellers.getSelectedItem();
                 Player currentPlayer = GameMaster.instance().getCurrentPlayer();
@@ -113,7 +113,7 @@ public class GUITradeDialog extends JDialog implements TradeDialog {
 
     private void updatePropertiesCombo(Player player) {
         cboProperties.removeAllItems();
-        Cell[] cells = player.getAllProperties();
+        CELL[] cells = player.getAllProperties();
         btnOK.setEnabled(cells.length > 0);
         for (int i = 0; i < cells.length; i++) {
             cboProperties.addItem(cells[i]);
