@@ -1,9 +1,12 @@
 package edu.ncsu.monopoly;
 
-public class Die {
-	private static final int SEIS = 6;
+import java.util.Random;
 
-	public int getRoll() {
-		return (int)(Math.random() * Die.SEIS) + 1;
+public class Die {
+	private Random r = new Random();
+	public int getRoll() 
+	{
+		var rand = r.nextInt();
+		return (rand* 6) + 1;
 	}
 }
