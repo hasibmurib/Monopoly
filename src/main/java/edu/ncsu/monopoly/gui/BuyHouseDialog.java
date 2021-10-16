@@ -18,8 +18,13 @@ public class BuyHouseDialog extends JDialog {
 	/**
 	 * 
 	 */
-	//un comentario para probar
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -294295194769032921L;
+	private static final int tres = 3;
+	private static final int dos = 2;
+	/**
+	 * 
+	 */
+	
 	private JComboBox<String> cboMonopoly; 
 	private JComboBox<String> cboNumber;
 	
@@ -28,7 +33,7 @@ public class BuyHouseDialog extends JDialog {
 	public BuyHouseDialog(Player player) {
 		this.player = player;
 		Container c = this.getContentPane();
-		c.setLayout(new GridLayout(3, 2));
+		c.setLayout(new GridLayout(BuyHouseDialog.tres, dos));
 		c.add(new JLabel("Select monopoly"));
 		c.add(buildMonopolyComboBox());
 		c.add(new JLabel("Number of houses"));
@@ -40,7 +45,7 @@ public class BuyHouseDialog extends JDialog {
 	}
 
 	private JButton buildCancelButton() {
-		JButton btn = new JButton("Cancel");
+		var btn = new JButton("Cancel");
 		btn.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				cancelClicked();
@@ -50,18 +55,18 @@ public class BuyHouseDialog extends JDialog {
 	}
 
 	private JComboBox<String> buildMonopolyComboBox() {
-		cboMonopoly = new JComboBox<String>(player.getMonopolies());
+		cboMonopoly = new JComboBox<>(player.getMonopolies());
 		return cboMonopoly;
 	}
 	
 	private JComboBox<String> buildNumberComboBox() {
-		JComboBox<String> jComboBox = new JComboBox<String>();
+		JComboBox<String> jComboBox = new JComboBox<>();
 		cboNumber = jComboBox;
 		return cboNumber;
 	}
 
 	private JButton buildOKButton() {
-		JButton btn = new JButton("OK");
+		var btn = new JButton("OK");
 		btn.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				okClicked();

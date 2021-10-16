@@ -8,7 +8,7 @@ public class CardCell extends Cell {
         this.type = type;
     }
     
-    public void playAction() {
+    public void playAction() throws UnsupportedOperationException {
     }
     
     public int getType() {
