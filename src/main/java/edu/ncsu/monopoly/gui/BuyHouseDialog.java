@@ -18,9 +18,8 @@ public class BuyHouseDialog extends JDialog {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -294295194769032921L;
-	private static final int tres = 3;
-	private static final int dos = 2;
+	private static final int TRES = 3;
+	private static final int DOS = 2;
 	/**
 	 * 
 	 */
@@ -33,7 +32,7 @@ public class BuyHouseDialog extends JDialog {
 	public BuyHouseDialog(Player player) {
 		this.player = player;
 		Container c = this.getContentPane();
-		c.setLayout(new GridLayout(BuyHouseDialog.tres, dos));
+		c.setLayout(new GridLayout(BuyHouseDialog.TRES, DOS));
 		c.add(new JLabel("Select monopoly"));
 		c.add(buildMonopolyComboBox());
 		c.add(new JLabel("Number of houses"));
@@ -47,8 +46,8 @@ public class BuyHouseDialog extends JDialog {
 	private JButton buildCancelButton() {
 		var btn = new JButton("Cancel");
 		btn.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e) {
-				cancelClicked();
+    public void actionPerformed(ActionEvent e) {
+      cancelClicked();
 			}
 		});
 		return btn;
@@ -68,8 +67,8 @@ public class BuyHouseDialog extends JDialog {
 	private JButton buildOKButton() {
 		var btn = new JButton("OK");
 		btn.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e) {
-				okClicked();
+    public void actionPerformed(ActionEvent e) {
+      okClicked();
 			}
 		});
 		return btn;

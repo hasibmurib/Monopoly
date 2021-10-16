@@ -11,10 +11,13 @@ import javax.swing.border.BevelBorder;
 
 import edu.ncsu.monopoly.Cell;
 import edu.ncsu.monopoly.GameMaster;
-import edu.ncsu.monopoly.Player;
 
 public class GUICell extends JPanel {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3697063853300632551L;
 	private Cell cell;
 	private JLabel lblInfo;
 	private JLabel[] lblPlayers = new JLabel[GameMaster.MAX_PLAYER];
@@ -23,7 +26,7 @@ public class GUICell extends JPanel {
         this.cell = cell;
         setLayout(new OverlayLayout(this));
         setBorder(new BevelBorder(BevelBorder.LOWERED));
-        JPanel pnlPlayer = new JPanel();
+        var pnlPlayer = new JPanel();
         pnlPlayer.setLayout(new GridLayout(2, 4));
         pnlPlayer.setOpaque(false);
         createPlayerLabels(pnlPlayer);
@@ -36,20 +39,20 @@ public class GUICell extends JPanel {
 	private void addCellInfo() {
         lblInfo = new JLabel();
 		displayInfo();
-        JPanel pnlInfo = new JPanel();
+        var pnlInfo = new JPanel();
         pnlInfo.setLayout(new GridLayout(1, 1));
         pnlInfo.add(lblInfo);
         add(pnlInfo);
     }
 	
 	public void addPlayer(int index) {
-		Player player = GameMaster.instance().getPlayer(index);
+		var player = GameMaster.instance().getPlayer(index);
 		lblPlayers[index].setText(player.getName().substring(0, 1));
 		lblPlayers[index].setOpaque(true);
 	}
 
     private void createPlayerLabels(JPanel pnlPlayer) {
-		for (int i = 0; i < GameMaster.MAX_PLAYER; i++) {
+		for (var i = 0; i < GameMaster.MAX_PLAYER; i++) {
 			lblPlayers[i] = new JLabel();
 			lblPlayers[i].setBackground(Color.GREEN);
 			pnlPlayer.add(lblPlayers[i]);

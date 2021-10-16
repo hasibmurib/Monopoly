@@ -23,19 +23,23 @@ public abstract class Cell {
 	
 	public abstract void playAction();
 
-	public void setAvailable(boolean available) {
+	public void setAvailable(boolean available) 
+	{
 		this.available = available;
 	}
 	
-	void setName(String name) {
+	void setName(String name) 
+	{
 		this.name = name;
 	}
 
-	public void setOwner(Player owner) {
+	public void setOwner(Player owner) 
+	{
 		this.owner = owner;
 	}
     
-    public String toString() {
+    public String toString() 
+    {
         return name;
     }
 }
