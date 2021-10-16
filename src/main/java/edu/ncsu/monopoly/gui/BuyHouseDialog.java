@@ -51,7 +51,8 @@ import edu.ncsu.monopoly.Player;
 		var btn = new JButton("Cancel");
 		btn.addActionListener(new ActionListener()
 		{
-    public void actionPerformed(ActionEvent e) 
+			@Override
+			public void actionPerformed(ActionEvent e) 
 			{
 				cancelClicked();
 			}
