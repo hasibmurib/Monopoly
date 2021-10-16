@@ -3,8 +3,6 @@ package edu.ncsu.monopoly.gui;
 
 import java.awt.Container;
 import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -49,9 +47,8 @@ import edu.ncsu.monopoly.Player;
 	private JButton buildCancelButton() 
 	{
 		var btn = new JButton("Cancel");
-		btn.addActionListener(e -> {
-				cancelClicked();
-		});
+		btn.addActionListener(e -> 
+				cancelClicked());
 		return btn;
 	}
 
@@ -71,9 +68,9 @@ import edu.ncsu.monopoly.Player;
 	private JButton buildOKButton() 
 	{
 		var btn = new JButton("OK");
-		btn.addActionListener(e -> {
-				okClicked();
-		});
+		btn.addActionListener(e -> 
+				okClicked()
+		);
 		return btn;
 	}
 
