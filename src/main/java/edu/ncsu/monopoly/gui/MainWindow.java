@@ -27,7 +27,7 @@ import edu.ncsu.monopoly.TradeDialog;
 
 public class MainWindow extends JFrame implements MonopolyGUI{
 	JPanel eastPanel = new JPanel();
-	ArrayList guiCells = new ArrayList();
+	ArrayList<GUICell> guiCells = new ArrayList<GUICell>();
 
 	JPanel northPanel = new JPanel();
 	PlayerPanel[] playerPanels;
@@ -57,7 +57,7 @@ public class MainWindow extends JFrame implements MonopolyGUI{
 		});
 	}
 	
-	private void addCells(JPanel panel, List cells) {
+	private void addCells(JPanel panel, List<?> cells) {
 		for(int x=0; x<cells.size(); x++) {
 			GUICell cell = new GUICell((CELL)cells.get(x));
 			panel.add(cell);
@@ -120,8 +120,13 @@ public class MainWindow extends JFrame implements MonopolyGUI{
 	public void movePlayer(int index, int from, int to) {
 		GUICell fromCell = queryCell(from);
 		GUICell toCell = queryCell(to);
-		fromCell.removePlayer(index);
-		toCell.addPlayer(index);
+		if (fromCell!=null) {
+			fromCell.removePlayer(index);
+		}
+		if (toCell!=null) {
+			toCell.addPlayer(index);
+		}
+		
 	}
 
     public RespondDialog openRespondDialog(TradeDeal deal) {
