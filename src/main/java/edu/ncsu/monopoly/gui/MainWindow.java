@@ -27,7 +27,7 @@ import edu.ncsu.monopoly.TradeDialog;
 
 public class MainWindow extends JFrame implements MonopolyGUI{
 	JPanel eastPanel = new JPanel();
-	ArrayList<GUICell> guiCells = new ArrayList<GUICell>();
+	ArrayList<GUICell> guiCells = new ArrayList<>();
 
 	JPanel northPanel = new JPanel();
 	PlayerPanel[] playerPanels;
@@ -145,7 +145,7 @@ public class MainWindow extends JFrame implements MonopolyGUI{
 	private GUICell queryCell(int index) {
 		CELL cell = GameMaster.instance().getGameBoard().getCell(index);
 		for(int x = 0; x < guiCells.size(); x++) {
-			GUICell guiCell = (GUICell)guiCells.get(x);
+			var guiCell = guiCells.get(x);
 			if(guiCell.getCell() == cell) return guiCell;
 		}
 		return null;
@@ -223,7 +223,7 @@ public class MainWindow extends JFrame implements MonopolyGUI{
 			playerPanels[i].displayInfo();
 		}
 		for(int j = 0; j < guiCells.size(); j++ ) {
-			GUICell cell = (GUICell)guiCells.get(j);
+			GUICell cell = guiCells.get(j);
 			cell.displayInfo();
 		}
 	}
